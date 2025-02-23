@@ -3,7 +3,11 @@ name: Build and Release
 on:
   push:
     tags:
-      - 'v*.*.*'  # Będzie reagować tylko na tagi w formacie v1.2.3
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+  packages: write
 
 jobs:
   build:
@@ -31,7 +35,6 @@ jobs:
           Get-FileHash -Algorithm SHA256 MazeSolver.exe | Format-List > MazeSolver.exe.sha256
 
       - name: Create Release
-        id: create_release
         uses: softprops/action-gh-release@v1
         with:
           files: |

@@ -1,0 +1,53 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Build with PyInstaller
+      run: python build.py
+
+    - name: Create SHA-256 checksum
+      run: |
+        cd dist
+        Get-FileHash -Algorithm SHA256 MazeSolver.exe | Format-List > MazeSolver.exe.sha256
+
+    - name: Generate version number
+      id: version
+      run: |
+        $date = Get-Date -Format "yyyy.MM.dd"
+        $buildNum = $env:GITHUB_RUN_NUMBER
+        echo "version=$date.build.$buildNum" >> $env:GITHUB_OUTPUT
+
+    - name: Create Release
+      id: create_release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: v${{ steps.version.outputs.version }}
+        name: Release v${{ steps.version.outputs.version }}
+        files: |
+          dist/MazeSolver.exe
+          dist/MazeSolver.exe.sha256
+        draft: false
+        prerelease: false
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

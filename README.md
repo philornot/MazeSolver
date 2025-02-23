@@ -18,7 +18,7 @@
 
 ### 📥 Instalacja
 
-1. Przejdź do zakładki [Releases](https://github.com/yourusername/mazesolver/releases)
+1. Przejdź do zakładki [Releases](https://github.com/philornot/mazesolver/releases/latest)
 2. Pobierz najnowszą wersję `MazeSolver.exe`
 3. Uruchom aplikację i rozpocznij zabawę!
 
@@ -63,7 +63,7 @@
 
 ### 📥 Installation
 
-1. Go to the [Releases](https://github.com/yourusername/mazesolver/releases) tab
+1. Go to the [Releases](https://github.com/philornot/mazesolver/releases/latest) tab
 2. Download the latest `MazeSolver.exe`
 3. Launch the application and start playing!
 
@@ -79,7 +79,7 @@
 #### Creating the Maze
 - **Left Mouse Button**: 
   - Click and drag to draw walls
-  - Click on existing wall to remove it
+  - Click on the existing wall to remove it
 - **Right Mouse Button**:
   - First click: sets starting point (🟢)
   - Second click: sets end point (🔴)
@@ -93,7 +93,7 @@
 ### 🎨 Color Guide
 - ⬛ Black: Maze walls
 - 🟢 Green: Starting point
-- 🔴 Red: End point
+- 🔴 Red: Endpoint
 - 🟦 Light blue: Visited cells
 - 🟪 Pink: Found path
 

@@ -2,8 +2,6 @@
 
 # MazeSolver
 
-[Polski](#-polski) | [English](#-english)
-
 ![License](https://img.shields.io/badge/license-Modified_MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-0.6.9-green.svg)
 ![Author](https://img.shields.io/badge/author-philornot-purple.svg)

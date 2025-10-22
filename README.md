@@ -1,10 +1,8 @@
 <div align="center">
 
-# 🎮 MazeSolver
+# MazeSolver
 
-### Twórz i rozwiązuj fascynujące labirynty! | Create and solve fascinating mazes!
-
-[🇵🇱 Polski](#-polski) | [🇬🇧 English](#-english)
+[Polski](#-polski) | [English](#-english)
 
 ![License](https://img.shields.io/badge/license-Modified_MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-0.6.9-green.svg)
@@ -14,9 +12,9 @@
 
 ---
 
-## 🇵🇱 Polski
+## Polski
 
-### 📥 Instalacja
+### Instalacja
 
 1. Przejdź do zakładki [Releases](https://github.com/philornot/mazesolver/releases/latest)
 2. Pobierz najnowszą wersję `MazeSolver.exe`

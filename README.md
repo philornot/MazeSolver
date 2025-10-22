@@ -12,8 +12,6 @@
 
 ---
 
-## Polski
-
 ### Instalacja
 
 1. Przejdź do zakładki [Releases](https://github.com/philornot/mazesolver/releases/latest)
@@ -45,7 +43,7 @@
 
 ---
 
-## 🇬🇧 English
+## 🇬🇧
 
 ### Installation
 
